@@ -1,8 +1,8 @@
 /*
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2019-11-21 19:30:25 
- * @Last Modified by:   Rhymedys 
- * @Last Modified time: 2019-11-21 19:30:25 
+ * @Last Modified by: Rhymedys
+ * @Last Modified time: 2019-11-22 22:19:11
  */
 
 
@@ -15,10 +15,12 @@ module.exports = function (source, map, meta) {
   const context = this.context
 
 
-  console.log('rhy-chunkfilename-loader context is', context)
-  console.log('rhy-chunkfilename-loader config is', option)
+
 
   if (!context.includes('node_modules')) {
+    
+    console.log('rhy-chunkfilename-loader context is', context)
+    console.log('rhy-chunkfilename-loader config is', option)
 
     const appPageRoot = option.appPageRoot
 
@@ -32,6 +34,9 @@ module.exports = function (source, map, meta) {
       this.callback(null, source, map, meta)
       return
     }
+
+
+    
 
     const belongPageStartIndex = hadMatchPos + appPageRoot.length + 1
     let belongPage = context.substr(belongPageStartIndex, context.length)

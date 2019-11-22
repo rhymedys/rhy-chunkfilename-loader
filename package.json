@@ -1,6 +1,6 @@
 {
   "name": "rhy-chunkfilename-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "use to rename the webpack's chunkfilename in import lib by async progress",
   "main": "src/index.js",
   "directories": {
